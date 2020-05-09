@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fragment_example"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cql.ecci.ucr.ac.ej3fragmentos.MainActivity">
+    <!-- Fragments are embedded into activity layout files using the <fragment> element -->
+    <!--The key properties within the <fragment> element are androide: name, which must
+    reference the class
+    associated with the fragment, and tools:layout, which must reference the XML resource
+    file
+    containing the layout of the fragment. -->
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="cql.ecci.ucr.ac.ej3fragmentos.ToolbarFragment"
+        android:id="@+id/fragment2"
+        tools:layout="@layout/toolbar_fragment"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_fragment_example"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_fragment_example"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_fragment_example"
+        android:layout_marginEnd="16dp" />
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="cql.ecci.ucr.ac.ej3fragmentos.TextFragment"
+        android:id="@+id/text_fragment"
+        tools:layout="@layout/text_fragment"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_fragment_example"
+        app:layout_constraintTop_toBottomOf="@+id/fragment2"
+        android:layout_marginTop="32dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_fragment_example" />
+</androidx.constraintlayout.widget.ConstraintLayout>
